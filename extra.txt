@@ -1,0 +1,23 @@
+//addItem(Studentinfo){
+//  if (Studentinfo !== ""){
+    const newitem={
+      id: Date.now(),
+      value: Studentinfo,
+      isDone: false
+    };
+    const list = [...this.state.list];
+    list.push(newItem);
+    this.setState({
+      list,
+      newItem: ""
+    });
+  }
+//}
+//deleteItem(id){
+  const list=[...this.state.list];
+  const updatedlist = list.filter(item => item.id !== id);
+  this.setState({list: updatedlist})
+}
+//updateInput(input){
+  this.setState({newItem:input})
+}
